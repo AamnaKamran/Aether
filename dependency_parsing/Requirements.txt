@@ -1,8 +1,0 @@
-This script requires has the following dependencies:
-
-nltk.parse.Stanford StanfordDependencyParser
-networkx
-matplotlib.pyplot
-spacy (version <3.5 and >3.4.2)
-en_core_web_sm
-numpy

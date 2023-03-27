@@ -1,3 +1,0 @@
-Download the corenlp jar files form the following link before running dependency_parser.py:
-
-https://stanfordnlp.github.io/CoreNLP/download.html
