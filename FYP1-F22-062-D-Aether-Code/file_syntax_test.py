@@ -2,7 +2,7 @@
 # Syntax shold be like so:
 
 
-def func(x):
+def write_file():
     return x + 1
 
 

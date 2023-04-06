@@ -123,6 +123,7 @@ def spanList(scenegraph):
 def scenegraphTable(sentence):
     # Here we just use the default parser.
     parserOutput = sng_parser.parse(sentence)
+    print('Sene graph parser:\n', parserOutput)
     print()
     return scenegraphGraph(parserOutput)
 
