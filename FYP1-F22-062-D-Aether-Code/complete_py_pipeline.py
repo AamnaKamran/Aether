@@ -1,50 +1,5 @@
-#! /usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-# This file contains a part of SceneGraphParser from demo.py.
-# Author : Jiayuan Mao
-# Email  : maojiayuan@gmail.com
-# Date   : 08/22/2018
-# Distributed under terms of the MIT license.
-# https://github.com/vacancy/SceneGraphParser
-
-# import speech_recognition as sr
-
-# flag = 1
-
-# while (flag):
-
-#     r = sr.Recognizer()
-
-#     with sr.Microphone() as source:
-#         r.adjust_for_ambient_noise(source)
-
-#         print("Please say something")
-
-#         audio = r.listen(source)
-
-#         print("Recognizing Now .... ")
-
-#        # recognize speech using google
-
-#         try:
-#             print("\nYou have said: \n" + r.recognize_google(audio) + "\n")
-#             user_input = input("Press\n- 0, if this is incorrect:\n- 1, if this is correct ")
-#             if int(user_input) == 0:
-#                 flag = 1
-#             elif int(user_input) == 1:
-#                     flag = 0
-
-#         except Exception as e:
-#             print("Error :  " + str(e))
-
-#     # write audio
-#     with open("recorded.wav", "wb") as f:
-#         f.write(audio.get_wav_data())
-
+import sng_parser
 import re
-# import os
-# import json
 from sentence_transformers import SentenceTransformer, util
 import torch
 from rdflib.namespace import FOAF, XMLNS, XSD, RDF, RDFS, OWL
@@ -53,6 +8,25 @@ from rdflib import Graph, URIRef, Literal, BNode, Namespace
 import networkx as nx
 import matplotlib.pyplot as plt
 import sng_parser
+
+# from time import time
+
+
+def new_asset_desc_matching():
+    from nltk.corpus import stopwords
+    from nltk import download
+    download('stopwords')
+    stop_words = stopwords.words('english')
+    sentence_a = [w for w in sentence_a if w not in stop_words]
+    sentence_b = [w for w in sentence_b if w not in stop_words]
+
+    start = time()
+    import os
+    from genism.models import Word2Vec
+    distance = model.wmdistance(sentence_a, sentence_b)
+    print("Cell took %.2f seconds to run." % (time() - start))
+
+
 N_id = 1
 
 
@@ -60,9 +34,78 @@ jar_path = 'stanford-corenlp-4.5.1/stanford-corenlp-4.5.1.jar'
 models_jar_path = 'stanford-corenlp-4.5.1/stanford-corenlp-4.5.1-models.jar'
 
 
-# head
-# modifiers
-# relations
+def formatAssetWriting(entity_asset_dict, subject_all_objects_dict):
+    formattedDict = dict()
+    # In the new dict, store in subject_all_objects_dict values, but format its keys to
+    # AssetName_AssetID (entity_asset_dict.keys) +_+<entityID> (subject_all_objects_dict.keys)
+    # Compare - from subject_all_objects_dict, remove from keys and value tuples, everything after & including the last '_'
+    #         - replace remaining keys & values in subject_all_objects_dict with values of keys that match with them
+
+    # EXAMPLE
+    # Entity Asset Dictionary:
+    # {'Cow': 'Wooden_Chair_uknkaffaw', 'sidewalk': 'Brick_Wall_vgvmcgf', 'city area': 'Brick_Wall_vgvmcgf', 'shops': 'Wooden_Chair_uknkaffaw'}
+
+    # All Subject-Objects Dictionary:
+    #  {'Cow_0': [('on', 'sidewalk_1'), ('in', 'city area_2')], 'city area_2': [('near', 'shops_3')]}
+
+    # RESULT
+    # {'Wooden_Chair_uknkaffaw_0': [('on', 'Brick_Wall_vgvmcgf_1'), ('in', 'Brick_Wall_vgvmcgf_2')], 'Brick_Wall_vgvmcgf_2': [('near', 'Wooden_Chair_uknkaffaw_3')]}
+
+    for k, v in subject_all_objects_dict.items():
+        formattedKey = k
+        formattedVal = v
+        if k.replace(k[k.rfind('_'):], '') in list(entity_asset_dict.keys()):
+            formattedKey = entity_asset_dict[k.replace(
+                k[k.rfind('_'):], '')] + k[k.rfind('_'):]
+
+        for values in v:
+            prep, val = list(values)
+            if val.replace(val[val.rfind('_'):], '') in list(entity_asset_dict.keys()):
+                formattedVal = (prep, entity_asset_dict[val.replace(
+                    val[val.rfind('_'):], '')] + val[val.rfind('_'):])
+
+            try:
+                # case: if key exists
+                check = formattedDict[formattedKey]
+                formattedDict[formattedKey].append(formattedVal)
+
+            except:
+                # case: if key is not yet added to dictionary
+                formattedDict[formattedKey] = [formattedVal]
+
+    return formattedDict
+
+
+def subjectAllObjectsDict(scenegraph):
+    # function to take in scene graph, return dictionary with key being the subject+'_'+uniqueEntityID from relations_list, and value being a list of all the objects and their relations with the subject
+    # e.g. A green leaf sits on a gray boulder and under a pebble.
+    #      {'leaf_0': [(on, boulder_1), (under, pebble_2)]}
+
+    objects = []
+    entities_list = scenegraph["entities"]
+    for entity in entities_list:
+        objects.append(entity["head"])
+    relations_list = scenegraph["relations"]
+
+    print('Printing relations: ', '\n')
+    subject_objects_dict = dict()
+    for relation in relations_list:
+        # subject+'_'+uniqueEntityID
+        subject = objects[relation.get("subject")]+'_'+str(relation['subject'])
+        relation_object = (
+            relation['relation'], objects[relation.get("object")]+'_'+str(relation['object']))
+
+        try:
+            # case: if same subject exists (need to be made possible after co-reference resolution)
+            # print("Subject exists with object ",
+            #       subject_objects_dict[subject], "already!")
+            check = subject_objects_dict[subject]
+            subject_objects_dict[subject].append(relation_object)
+
+        except:                                     # case: if subject is not yet added to dictionary
+            # print("Subject", subject, " is now being created.")
+            subject_objects_dict[subject] = [relation_object]
+    return subject_objects_dict
 
 
 def scenegraphGraph(scenegraph):
@@ -73,12 +116,10 @@ def scenegraphGraph(scenegraph):
     # HEAD
     entities_list = scenegraph["entities"]
     for entity in entities_list:
-        # print(entity["head"])
         val = entity["head"]
         similarity_input[val] = []
         objects.append(val)
         G.add_node(val)
-    # print()
 
     # MODIFIERS
     for entity in entities_list:
@@ -92,13 +133,12 @@ def scenegraphGraph(scenegraph):
 
     # RELATIONS
     relations_list = scenegraph["relations"]
+    print('Printing relations: ', '\n')
 
     for relation in relations_list:
+        print(relation)
         G.add_edge(objects[relation.get("subject")], objects[relation.get(
             "object")], label=relation.get("relation"))
-
-    # print(relations_list)
-    # print()
 
     pos = nx.spring_layout(G)
     node_size = 800
@@ -110,7 +150,7 @@ def scenegraphGraph(scenegraph):
 
     plt.show()
 
-    print(similarity_input)  # the output
+    # print(similarity_input)  # the output
     return similarity_input
 
 
@@ -124,14 +164,16 @@ def scenegraphTable(sentence):
     # Here we just use the default parser.
     parserOutput = sng_parser.parse(sentence)
     print()
-    return scenegraphGraph(parserOutput)
+    # original output
+    print('Default Parser Output: \n', parserOutput)
+    sng_parser.tprint(parserOutput)
+    return scenegraphGraph(parserOutput), parserOutput
 
 
 # Scene graph parsing completed here
 
 
 #########################################################
-# import tensorflow as tf
 print("Loading model")
 sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
 print("Loaded model")
@@ -175,7 +217,6 @@ def find_similar_asset(input_string, KG_info):
 
     # cosine_scores =  util.cos_sim(input_string, list(KG_tensor_dict.values()))
     # Find the pair with the highest cosine similarity score
-    pair = []
     max_score = -1
     max_index = -1
     for i in range(len(cosine_scores)):
@@ -185,12 +226,8 @@ def find_similar_asset(input_string, KG_info):
     closest_asset_ID = ""
     for id, tensor in KG_tensor_dict.items():
         if torch.equal(tensor, KG_tensors_values[max_index]):
-            print("found id: ", id)
             closest_asset_ID = id
             break
-    print("Closest matching asst ID = ", closest_asset_ID)
-    print("Matching ID info:\n")
-
     return KG_info[0][closest_asset_ID], KG_info[1][closest_asset_ID], KG_info[2][closest_asset_ID]
 
 
@@ -199,18 +236,23 @@ def find_similar_asset(input_string, KG_info):
 
 def scene_graph_tensors(sceneGraph_dict):
     all_spawning_asset_desc = []
+    asset_tensor_dict = dict()
+    entities = list(sceneGraph_dict.keys())
     for key, value in sceneGraph_dict.items():
         desc = ""
         for modifier in value:
             desc += modifier + ' '
-        all_spawning_asset_desc.append(key + desc)
+        all_spawning_asset_desc.append(desc+key)
 
     # list of all tensors for all nouns and their modifiers - later for matching with assets
     all_spawning_asset_tensor = []
-    for str_desc in all_spawning_asset_desc:
-        all_spawning_asset_tensor.append(create_embedding_tensor(str_desc))
+    for i in range(len(entities)):
+        # for str_desc in all_spawning_asset_desc:
+        asset_tensor_desc = create_embedding_tensor(all_spawning_asset_desc[i])
+        all_spawning_asset_tensor.append(asset_tensor_desc)
+        asset_tensor_dict[entities[i]] = asset_tensor_desc
 
-    return all_spawning_asset_tensor
+    return all_spawning_asset_tensor, asset_tensor_dict
 
 
 def get_KG_asset_tensors():
@@ -225,7 +267,7 @@ def get_KG_asset_tensors():
             {?s mega:assetID ?aID}
             UNION
             {?s mega:assetName ?aName}
-            
+
         }
     """)
 
@@ -251,50 +293,47 @@ def get_KG_asset_tensors():
 
 
 def write_to_file(chosen_asset):
-    print("Chosen Asset ID: ", chosen_asset[1])
-    print("Chosen Asset Name: ", chosen_asset[2], type(chosen_asset[2]))
-    print("\n\n")
+    # print("Chosen Asset ID: ", chosen_asset[1])
+    # print("Chosen Asset Name: ", chosen_asset[2])
+    # print("\n\n")
     line = re.sub(" ", "_", chosen_asset[2])
     line += "_"+chosen_asset[1]
 
     # append mode
     fil = open("asset_info.txt", "a")
     fil.write(line)
-    # writing newline character
     fil.write("\n\n\n")
     fil.close()
 
 
 def match_KG_input(KG_info, input_tensors):
-    # res_dict = scenegraphTable('A black woman standing next to a shiny red piano.')
-    # res_tensors = scene_graph_tensors(res_dict)
-    for in_tensor in input_tensors:
+    entity_asset_dict = dict()
+    # input_tensors
+    # [entity_tensors, entityName_tensor_dictionary]
+
+    for k, v in input_tensors[1].items():
+        # for in_tensor in input_tensors[0]:
         # for each input entity, find closest assetID and path+append to file: 'assetName_assetID'
-        chosen_asset = find_similar_asset(in_tensor, KG_info)
+        chosen_asset = find_similar_asset(v, KG_info)
+        entity_asset_dict[k] = re.sub(
+            " ", "_", chosen_asset[2]) + "_" + chosen_asset[1]
         write_to_file(chosen_asset)
+    # print("Entity Asset Dictionary:\n")
+    # print(entity_asset_dict)
+    return entity_asset_dict
 
 
 def main():
-    #     # scenegraphTable('A woman is playing the piano in the room.')
-    #     # scenegraphTable('A woman playing the piano in the room.')
-    #     # scenegraphTable('A piano is played by a woman in the room.')
-    #     # scenegraphTable('A woman is playing the space craft at NASA.')
-    #     # scenegraphTable('A woman is playing with a space craft at NASA.')
-    #     # scenegraphTable('A woman next to a piano.')
-    #     # scenegraphTable('A woman in front of a piano.')
-    #     res_dict = scenegraphTable('A black woman standing next to a shiny red piano.')
-    #     # scenegraphTable('The woman is a pianist.')
-    #     # scenegraphTable('A giraffe grazing a tree in the wildness with other wildlife.')
-    #     # scenegraphTable('Fat brown cow standing on sidewalk in city area near shops.')
-    #     # scenegraphTable('A black horse is wearing a green saddle. A small girl sits on the horse. The horse is standing on the green hill.')
-    #     # scenegraphTable("a small and thin girl")
-    #     res_tensors = scene_graph_tensors(res_dict)
-    #     print(res_tensors)
 
-    # sentence = r.recognize_google(audio)
     sentence = 'There is a small green leaf on a large gray boulder.'
     sentence = 'There is a small green leaf on a large gray boulder. The boulder sits in a wide river bank.'
-    sentence = 'There is a small green leaf on a large gray boulder. The boulder is in a wide river with pebbles on top of it.'
+    sentence = 'There is a small green leaf on a large gray boulder. The boulder with pebbles around it is in a wide river.'
+
+    # Co-reference resolution issue + in,has not detected as relations
+    sentence = 'A small green leaf lies on a large gray boulder. The boulder is in a wide river and has small pebbles around it.'
+
+    sentence = 'A small green leaf lies on a large gray boulder. The boulder sits in a wide river. The leaf has small pebbles around it.'
+    sentence = 'Cow standing on sidewalk in city area near shops .'
 
     KG_info = get_KG_asset_tensors()
     # print('Input your own sentence. Type q to quit.')
@@ -303,20 +342,16 @@ def main():
     #     if sent.strip() == 'q':
     #         break
 
-    # KG_tensors = KG_info()[0]
-
-    # res_dict = scenegraphTable('A black woman standing next to a shiny red piano.')
-    # res_tensors = scene_graph_tensors(res_dict)
-
-    # input_tensors = match_KG_input(KG_info, res_tensors)
     fil = open("asset_info.txt", "w")
     fil.close()
-    res_dict = scenegraphTable(sentence)
+    res_dict, parserOutput = scenegraphTable(sentence)
     res_tensors = scene_graph_tensors(res_dict)
-    match_KG_input(KG_info, res_tensors)
-
-    # start_time = time.time()
-    # print("Total time taken = ", (time.time() - start_time), " seconds.")
+    entity_asset_dict = match_KG_input(KG_info, res_tensors)
+    print("Entity Asset Dictionary:\n", entity_asset_dict)
+    subject_all_objects_dict = subjectAllObjectsDict(parserOutput)
+    print("All Subject-Objects Dictionary:\n", subject_all_objects_dict)
+    print("Formatted subject-object dictionary:\n", formatAssetWriting(
+        entity_asset_dict, subject_all_objects_dict))
 
 
 if __name__ == '__main__':
