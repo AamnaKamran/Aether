@@ -1,0 +1,2 @@
+Obtain requirements using pipreqs:
+pipreqs --force --no-follow-links --ignore bin,include,lib --savepath requirements.txt
