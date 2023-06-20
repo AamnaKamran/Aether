@@ -6,4 +6,6 @@ sentence_transformers==2.2.2
 torch==1.9.0
 spacy
 SceneGraphParser
-unreal
+unreal==0.1.1
+whisper==1.1.10
+openai_whisper==20230314
