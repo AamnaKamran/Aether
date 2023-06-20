@@ -1,7 +1,7 @@
 name: ci-workflow
 on:
   push:
-    branches: [main]
+    branches: [complete_pipeline]
 jobs:
   build:
     runs-on: ubuntu-latest
