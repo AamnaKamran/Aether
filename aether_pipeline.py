@@ -834,376 +834,373 @@ def match_KG_input(KG_info, input_tensors):
     return entity_asset_dict
 
 
-# def spawn_object_behind(first_actor, second_actor):
-#    print("In BEHIND Function")
-#    camera_location, camera_rotation = unreal.EditorLevelLibrary.get_level_viewport_camera_info()
-#    #camera_rotation.get_forward_vector()
-#
-#    #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_width = first_actor_bounding_box.box_extent.x
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#
-#    second_actor_width = second_actor_bounding_box.box_extent.x
-#    vec = unreal.Vector(first_actor_width+ second_actor_width + 200.0, 0, 0)
-#
-#    second_actor.set_actor_location(first_actor_loc - vec, False, True)
-#
-# def spawn_object_at_back_of(first_actor, second_actor):
-#    print("In BACK OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_width = first_actor_bounding_box.box_extent.x
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_width = second_actor_bounding_box.box_extent.x
-#    vec = unreal.Vector(first_actor_width+ second_actor_width, 0, 0)
-#
-#    second_actor.set_actor_location(first_actor_loc - vec, False, True)
-#
-# def spawn_object_in_front_of(first_actor, second_actor):
-#    print("In FRONT OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_width = first_actor_bounding_box.box_extent.x
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_width = second_actor_bounding_box.box_extent.x
-#    vec = unreal.Vector(first_actor_width+ second_actor_width, 0, 0)
-#
-#    second_actor.set_actor_location(first_actor_loc + vec, False, True)
-#
-#
-# def spawn_object_at_right_of(first_actor, second_actor):
-#    print("In RIGHT OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_length = first_actor_bounding_box.box_extent.y
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_length = second_actor_bounding_box.box_extent.y
-#    vec = unreal.Vector(0,first_actor_length+ second_actor_length, 0)
-#
-#    second_actor.set_actor_location(first_actor_loc + vec, False, True)
-#
-# def spawn_object_at_left_of(first_actor, second_actor):
-#    print("In LEFT OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_length = first_actor_bounding_box.box_extent.y
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_length = second_actor_bounding_box.box_extent.y
-#    vec = unreal.Vector(0,first_actor_length+ second_actor_length, 0)
-#
-#    second_actor.set_actor_location(first_actor_loc - vec, False, True)
-#
-#
-# def spawn_object_on(first_actor, second_actor):
-#    print("In ON OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_height = first_actor_bounding_box.box_extent.z
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_height = second_actor_bounding_box.box_extent.z
-#    vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height)
-#
-#    second_actor.set_actor_location(first_actor_loc + vec, False, True)
-#
-# def spawn_object_beneath(first_actor, second_actor):
-#    print("In BENEATH OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_height = first_actor_bounding_box.box_extent.z
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_height = second_actor_bounding_box.box_extent.z
-#    vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height)
-#
-#    first_actor.set_actor_location(second_actor_loc + vec, False, True)
-#
-# def spawn_object_in(first_actor, second_actor):
-#    print("In IN OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_height = first_actor_bounding_box.box_extent.z
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_height = second_actor_bounding_box.box_extent.z
-#    #vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height)
-#
-#    #first_actor.set_actor_location(second_actor_loc + vec, False, True)
-#
-# def spawn_object_over(first_actor, second_actor):
-#    print("In OVER OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_height = first_actor_bounding_box.box_extent.z
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_height = second_actor_bounding_box.box_extent.z
-#    vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height + 250)
-#
-#    second_actor.set_actor_location(first_actor_loc + vec, False, True)
-#
-# def spawn_object_under(first_actor, second_actor):
-#    print("In UNDER OF Function")
-#     #Fisrt Actor
-#    first_actor_loc = first_actor.get_actor_location()
-#    first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    first_actor_bounding_box = first_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    first_actor_height = first_actor_bounding_box.box_extent.z
-#    #Second Actor
-#    second_actor_loc = second_actor.get_actor_location()
-#    second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
-#    second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
-#
-#    # Get the bounding box of the static mesh component
-#    second_actor_bounding_box = second_actor_static_mesh.get_bounds()
-#
-#    # Extract the height from the bounding box
-#    second_actor_height = second_actor_bounding_box.box_extent.z
-#    vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height+ 250)
-#
-#    first_actor.set_actor_location(second_actor_loc + vec, False, True)
-#
-# def spawn_object_besides(first_actor, second_actor):
-#    spawn_object_at_right_of(first_actor, second_actor)
-#
-# def spawn_assets(asset_dicts):
-#    asset_directory = "/Game/Megascans/3D_Assets/"
-#    file1 = open('/home/aim2/Documents/asset_info.txt', 'r')
-#    Lines = file1.readlines()
-#    #class_path = "/Script/Project1.CustomizableActor"
-#    for sub,objs in asset_dicts.items():
-#        print(f"Asset = {sub}")
-#        prev_actor = spawn_an_asset(sub)
-#        if prev_actor != None:
-#            for obj in objs:
-#                if obj[0] != "" and obj[1] != "":
-#                    print(f"Obj1 = {obj[1]}")
-#                    actor = spawn_an_asset(obj[1])
-#                    if actor!= None:
-#                        if obj[0] == "on":
-#                            spawn_object_on(prev_actor, actor)
-#                        elif obj[0] == "back":
-#                            spawn_object_at_back_of(prev_actor, actor)
-#                        elif obj[0] == "front":
-#                            spawn_object_in_front_of(prev_actor, actor)
-#                        elif obj[0] == "right":
-#                            spawn_object_at_right_of(prev_actor, actor)
-#                        elif obj[0] == "left":
-#                            spawn_object_at_left_of(prev_actor, actor)
-#                        elif obj[0] == "behind":
-#                            spawn_object_behind(prev_actor, actor)
-#                        elif obj[0] == "beneath":
-#                            spawn_object_beneath(prev_actor, actor)
-#                        elif obj[0] == "in":
-#                            spawn_object_in(prev_actor, actor)
-#                        elif obj[0] == "over":
-#                            spawn_object_over(prev_actor, actor)
-#                        elif obj[0] == "under":
-#                            spawn_object_under(prev_actor, actor)
-#                        elif obj[0] == "besides":
-#                            spawn_object_besides(prev_actor, actor)
-#        else:
-#            print("first actor didnt spawn")
-#
-# def spawn_an_asset(asset_name):
-#    asset_directory = "/Game/Megascans/3D_Assets/"
-#    world = unreal.EditorLevelLibrary.get_editor_world()
-#
-#    # Spawn an actor
-#    actor_location = unreal.Vector(0.0, 0.0, 0.0)
-#    actor_rotation = unreal.Rotator(0.0, 0.0, 0.0)
-#
-#    actor_class = unreal.EditorAssetLibrary.load_blueprint_class("/Game/Blueprints/MyActor")
-#    actor = unreal.EditorLevelLibrary.spawn_actor_from_class(actor_class, actor_location, actor_rotation)
-#
-#
-#    asset_registry_module = unreal.AssetRegistryHelpers.get_asset_registry()
-#    assets = asset_registry_module.get_assets_by_path(asset_directory , recursive=True, include_only_on_disk_assets=False)
-#
-#
-#    filter = unreal.ARFilter(recursive_paths=True)
-#    filter.class_names.append("StaticMesh")
-#    assets = asset_registry_module.run_assets_through_filter(assets, filter)
-#    #print(f"assets = {assets}")
-#
-#    f_asset_name = asset_name[:asset_name.rfind('_')]
-#    for asset in assets:
-#
-#        asset_str = str(asset.asset_name)
-#        asset_str = asset_str.strip()
-#        line_str = "S_" + f_asset_name.strip()
-#        line_str = line_str.strip()
-#
-#        if asset_str.find(line_str) != -1:
-#
-#            print("Matched ", asset_str, " to ", line_str)
-#            print(asset)
-#            #actor.static_mesh_component.set_static_mesh(static_mesh)
-#            static_mesh = unreal.EditorAssetLibrary.load_asset(str(asset.object_path))
-#            static_mesh_component = actor.get_component_by_class(unreal.StaticMeshComponent)
-#
-#            # Set the static mesh of the component
-#            static_mesh_component.set_static_mesh(static_mesh)
-#
-#            editor_world = unreal.EditorLevelLibrary.get_editor_world()
-#            if editor_world:
-#                print("Hello")
-#                camera_location, camera_rotation = unreal.EditorLevelLibrary.get_level_viewport_camera_info()
-#
-#                # Calculate the spawn location in front of the camera
-#                spawn_distance = 500.0  # How far in front of the camera to spawn the asset
-#                print(f"forward vector{camera_rotation}")
-#                spawn_location = camera_location + (camera_rotation.get_forward_vector() * spawn_distance)
-#                spawn_location.z = 0.0  # Set the Z coordinate to ground level
-#                actor.set_actor_location(spawn_location, False, True)
-#                return actor
-#
-#    return None
-#
+def spawn_object_behind(first_actor, second_actor):
+   print("In BEHIND Function")
+   camera_location, camera_rotation = unreal.EditorLevelLibrary.get_level_viewport_camera_info()
+   #camera_rotation.get_forward_vector()
+
+   #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_width = first_actor_bounding_box.box_extent.x
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+
+   second_actor_width = second_actor_bounding_box.box_extent.x
+   vec = unreal.Vector(first_actor_width+ second_actor_width + 200.0, 0, 0)
+
+   second_actor.set_actor_location(first_actor_loc - vec, False, True)
+
+def spawn_object_at_back_of(first_actor, second_actor):
+   print("In BACK OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_width = first_actor_bounding_box.box_extent.x
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_width = second_actor_bounding_box.box_extent.x
+   vec = unreal.Vector(first_actor_width+ second_actor_width, 0, 0)
+
+   second_actor.set_actor_location(first_actor_loc - vec, False, True)
+
+def spawn_object_in_front_of(first_actor, second_actor):
+   print("In FRONT OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_width = first_actor_bounding_box.box_extent.x
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_width = second_actor_bounding_box.box_extent.x
+   vec = unreal.Vector(first_actor_width+ second_actor_width, 0, 0)
+
+   second_actor.set_actor_location(first_actor_loc + vec, False, True)
+
+
+def spawn_object_at_right_of(first_actor, second_actor):
+   print("In RIGHT OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_length = first_actor_bounding_box.box_extent.y
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_length = second_actor_bounding_box.box_extent.y
+   vec = unreal.Vector(0,first_actor_length+ second_actor_length, 0)
+
+   second_actor.set_actor_location(first_actor_loc + vec, False, True)
+
+def spawn_object_at_left_of(first_actor, second_actor):
+   print("In LEFT OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_length = first_actor_bounding_box.box_extent.y
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_length = second_actor_bounding_box.box_extent.y
+   vec = unreal.Vector(0,first_actor_length+ second_actor_length, 0)
+
+   second_actor.set_actor_location(first_actor_loc - vec, False, True)
+
+
+def spawn_object_on(first_actor, second_actor):
+   print("In ON OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_height = first_actor_bounding_box.box_extent.z
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_height = second_actor_bounding_box.box_extent.z
+   vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height)
+
+   second_actor.set_actor_location(first_actor_loc + vec, False, True)
+
+def spawn_object_beneath(first_actor, second_actor):
+   print("In BENEATH OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_height = first_actor_bounding_box.box_extent.z
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_height = second_actor_bounding_box.box_extent.z
+   vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height)
+
+   first_actor.set_actor_location(second_actor_loc + vec, False, True)
+
+def spawn_object_in(first_actor, second_actor):
+   print("In IN OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_height = first_actor_bounding_box.box_extent.z
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_height = second_actor_bounding_box.box_extent.z
+   #vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height)
+
+   #first_actor.set_actor_location(second_actor_loc + vec, False, True)
+
+def spawn_object_over(first_actor, second_actor):
+   print("In OVER OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_height = first_actor_bounding_box.box_extent.z
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_height = second_actor_bounding_box.box_extent.z
+   vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height + 250)
+
+   second_actor.set_actor_location(first_actor_loc + vec, False, True)
+
+def spawn_object_under(first_actor, second_actor):
+   print("In UNDER OF Function")
+    #Fisrt Actor
+   first_actor_loc = first_actor.get_actor_location()
+   first_actor_static_mesh_component = first_actor.get_component_by_class(unreal.StaticMeshComponent)
+   first_actor_static_mesh = first_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   first_actor_bounding_box = first_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   first_actor_height = first_actor_bounding_box.box_extent.z
+   #Second Actor
+   second_actor_loc = second_actor.get_actor_location()
+   second_actor_static_mesh_component = second_actor.get_component_by_class(unreal.StaticMeshComponent)
+   second_actor_static_mesh = second_actor_static_mesh_component.static_mesh
+
+   # Get the bounding box of the static mesh component
+   second_actor_bounding_box = second_actor_static_mesh.get_bounds()
+
+   # Extract the height from the bounding box
+   second_actor_height = second_actor_bounding_box.box_extent.z
+   vec = unreal.Vector( 0, 0,first_actor_height + second_actor_height+ 250)
+
+   first_actor.set_actor_location(second_actor_loc + vec, False, True)
+
+def spawn_object_besides(first_actor, second_actor):
+   spawn_object_at_right_of(first_actor, second_actor)
+
+def spawn_assets(asset_dicts):
+   asset_directory = "/Game/Megascans/3D_Assets/"
+   file1 = open('/home/aim2/Documents/asset_info.txt', 'r')
+   Lines = file1.readlines()
+   #class_path = "/Script/Project1.CustomizableActor"
+   for sub,objs in asset_dicts.items():
+       print(f"Asset = {sub}")
+       prev_actor = spawn_an_asset(sub)
+       if prev_actor != None:
+           for obj in objs:
+               if obj[0] != "" and obj[1] != "":
+                   print(f"Obj1 = {obj[1]}")
+                   actor = spawn_an_asset(obj[1])
+                   if actor!= None:
+                       if obj[0] == "on":
+                           spawn_object_on(prev_actor, actor)
+                       elif obj[0] == "back":
+                           spawn_object_at_back_of(prev_actor, actor)
+                       elif obj[0] == "front":
+                           spawn_object_in_front_of(prev_actor, actor)
+                       elif obj[0] == "right":
+                           spawn_object_at_right_of(prev_actor, actor)
+                       elif obj[0] == "left":
+                           spawn_object_at_left_of(prev_actor, actor)
+                       elif obj[0] == "behind":
+                           spawn_object_behind(prev_actor, actor)
+                       elif obj[0] == "beneath":
+                           spawn_object_beneath(prev_actor, actor)
+                       elif obj[0] == "in":
+                           spawn_object_in(prev_actor, actor)
+                       elif obj[0] == "over":
+                           spawn_object_over(prev_actor, actor)
+                       elif obj[0] == "under":
+                           spawn_object_under(prev_actor, actor)
+                       elif obj[0] == "besides":
+                           spawn_object_besides(prev_actor, actor)
+       else:
+           print("first actor didnt spawn")
+
+def spawn_an_asset(asset_name):
+   asset_directory = "/Game/Megascans/3D_Assets/"
+   world = unreal.EditorLevelLibrary.get_editor_world()
+
+   # Spawn an actor
+   actor_location = unreal.Vector(0.0, 0.0, 0.0)
+   actor_rotation = unreal.Rotator(0.0, 0.0, 0.0)
+
+   actor_class = unreal.EditorAssetLibrary.load_blueprint_class("/Game/Blueprints/MyActor")
+   actor = unreal.EditorLevelLibrary.spawn_actor_from_class(actor_class, actor_location, actor_rotation)
+
+
+   asset_registry_module = unreal.AssetRegistryHelpers.get_asset_registry()
+   assets = asset_registry_module.get_assets_by_path(asset_directory , recursive=True, include_only_on_disk_assets=False)
+
+
+   filter = unreal.ARFilter(recursive_paths=True)
+   filter.class_names.append("StaticMesh")
+   assets = asset_registry_module.run_assets_through_filter(assets, filter)
+   #print(f"assets = {assets}")
+
+   f_asset_name = asset_name[:asset_name.rfind('_')]
+   for asset in assets:
+
+       asset_str = str(asset.asset_name)
+       asset_str = asset_str.strip()
+       line_str = "S_" + f_asset_name.strip()
+       line_str = line_str.strip()
+
+       if asset_str.find(line_str) != -1:
+
+           print("Matched ", asset_str, " to ", line_str)
+           print(asset)
+           #actor.static_mesh_component.set_static_mesh(static_mesh)
+           static_mesh = unreal.EditorAssetLibrary.load_asset(str(asset.object_path))
+           static_mesh_component = actor.get_component_by_class(unreal.StaticMeshComponent)
+
+           # Set the static mesh of the component
+           static_mesh_component.set_static_mesh(static_mesh)
+
+           editor_world = unreal.EditorLevelLibrary.get_editor_world()
+           if editor_world:
+               print("Hello")
+               camera_location, camera_rotation = unreal.EditorLevelLibrary.get_level_viewport_camera_info()
+
+               # Calculate the spawn location in front of the camera
+               spawn_distance = 500.0  # How far in front of the camera to spawn the asset
+               print(f"forward vector{camera_rotation}")
+               spawn_location = camera_location + (camera_rotation.get_forward_vector() * spawn_distance)
+               spawn_location.z = 0.0  # Set the Z coordinate to ground level
+               actor.set_actor_location(spawn_location, False, True)
+               return actor
+
+   return None
+
 
 
 def main():
-    # Co-reference resolution issue + in,has not detected as relations
-    #    sentence = 'A small green leaf lies on a large gray boulder. The boulder is in a wide river and has small pebbles around it.'
 
-    # KG_info = get_KG_asset_tensors()
     # new_file_paths = trigger_update(path_to_files)
     # update_KG(new_file_paths)
 
@@ -1216,8 +1213,6 @@ def main():
     #     if sent.strip() == 'q':
     #         break
 
-    #    fil = open("/home/aim2/Documents/asset_info.txt", "w")
-    #    fil.close()
     res_dict, parserOutput = scenegraphTable(sentence)
     res_dict = scene_graph_list(res_dict)[1]
     subject_all_objects_dict = subjectAllObjectsDict(parserOutput)
