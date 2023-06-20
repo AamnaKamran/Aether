@@ -1,222 +1,1166 @@
-@prefix : <http://www.semanticweb.org/szm/megascan-assets-ontology#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns1: <http://www.semanticweb.org/szm/megascan-assets-ontology#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.semanticweb.org/szm/megascan-assets-ontology> a owl:Ontology .
-
-:Asset_Concrete_Stairs a :Asset ;
-    :assetAvgColor "#877F71"^^xsd:string ;
-    :assetCategory "3d"^^xsd:string,
-        "other"^^xsd:string,
-        "various"^^xsd:string ;
-    :assetEnvironmentBiome :Biome_undefined ;
-    :assetEnvironmentRegion :Region_Asia ;
-    :assetID "uknjfevga"^^xsd:string ;
-    :assetName "Concrete Stairs"^^xsd:string ;
-    :assetSize :large ;
-    :assetTag "abandoned"^^xsd:string,
-        "abandoned buildings"^^xsd:string,
-        "buildings"^^xsd:string,
-        "city"^^xsd:string,
+ns1:Asset_slumj a ns1:Asset ;
+    ns1:assetAvgColor "#776E63"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "brick"^^xsd:string,
         "concrete"^^xsd:string,
-        "construction"^^xsd:string,
-        "dirt"^^xsd:string,
-        "dirty"^^xsd:string,
-        "dust"^^xsd:string,
-        "dusty"^^xsd:string,
-        "gray"^^xsd:string,
-        "grit"^^xsd:string,
-        "gritty"^^xsd:string,
-        "industrial"^^xsd:string,
-        "malls"^^xsd:string,
-        "plazas"^^xsd:string,
-        "shopping centers"^^xsd:string,
-        "stairs"^^xsd:string,
-        "steps"^^xsd:string,
-        "stones"^^xsd:string,
+        "damaged"^^xsd:string ;
+    ns1:assetID "slumj"^^xsd:string ;
+    ns1:assetName "Broken Wall"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "archviz"^^xsd:string,
+        "brick"^^xsd:string,
+        "broken"^^xsd:string,
+        "cement"^^xsd:string,
+        "concrete"^^xsd:string,
+        "environments"^^xsd:string,
+        "old"^^xsd:string,
         "urban"^^xsd:string .
 
-:Asset_Mossy_Mounds a :Asset ;
-    :assetAvgColor "#38330E"^^xsd:string ;
-    :assetCategory "3d"^^xsd:string,
-        "ground"^^xsd:string,
-        "moss"^^xsd:string ;
-    :assetEnvironmentBiome :Biome_undefined ;
-    :assetEnvironmentRegion :Region_Europe ;
-    :assetID "tk4tcfhfa"^^xsd:string ;
-    :assetName "Mossy Mounds"^^xsd:string ;
-    :assetSize :medium ;
-    :assetTag "archviz"^^xsd:string,
-        "dirt"^^xsd:string,
+ns1:Asset_tcugcajfa a ns1:Asset ;
+    ns1:assetAvgColor "#A99780"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "misc"^^xsd:string ;
+    ns1:assetID "tcugcajfa"^^xsd:string ;
+    ns1:assetName "Ram Bone"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "animal"^^xsd:string,
+        "archviz"^^xsd:string,
+        "beige"^^xsd:string,
+        "bone"^^xsd:string,
+        "ram"^^xsd:string .
+
+ns1:Asset_tezodb1pa a ns1:Asset ;
+    ns1:assetAvgColor "#906E55"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "brown"^^xsd:string,
+        "champignon"^^xsd:string,
+        "fungus"^^xsd:string,
+        "mushroom"^^xsd:string ;
+    ns1:assetID "tezodb1pa"^^xsd:string ;
+    ns1:assetName "Gilled Mushroom"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "archviz"^^xsd:string,
+        "brown"^^xsd:string,
+        "champignon"^^xsd:string,
+        "fungus"^^xsd:string,
+        "mushroom"^^xsd:string .
+
+ns1:Asset_tfwobcqpa a ns1:Asset ;
+    ns1:assetAvgColor "#9B7454"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "brown"^^xsd:string,
+        "fungi"^^xsd:string,
+        "fungus"^^xsd:string,
+        "mushroom"^^xsd:string ;
+    ns1:assetID "tfwobcqpa"^^xsd:string ;
+    ns1:assetName "Gilled Mushroom"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "archviz"^^xsd:string,
+        "brown"^^xsd:string,
+        "fungi"^^xsd:string,
+        "fungus"^^xsd:string,
+        "mushroom"^^xsd:string .
+
+ns1:Asset_tfxpddapa a ns1:Asset ;
+    ns1:assetAvgColor "#BC946C"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "brown"^^xsd:string,
+        "fungi"^^xsd:string,
+        "fungus"^^xsd:string,
+        "mushroom"^^xsd:string ;
+    ns1:assetID "tfxpddapa"^^xsd:string ;
+    ns1:assetName "Gilled Mushroom"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "archviz"^^xsd:string,
+        "brown"^^xsd:string,
+        "fungi"^^xsd:string,
+        "fungus"^^xsd:string,
+        "mushroom"^^xsd:string .
+
+ns1:Asset_tiiief2fa a ns1:Asset ;
+    ns1:assetAvgColor "#7B664D"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "misc"^^xsd:string ;
+    ns1:assetID "tiiief2fa"^^xsd:string ;
+    ns1:assetName "Ram Skull"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "animal"^^xsd:string,
+        "archviz"^^xsd:string,
+        "beige"^^xsd:string,
+        "bone"^^xsd:string,
+        "burn"^^xsd:string,
+        "horns"^^xsd:string,
+        "ram"^^xsd:string,
+        "skull"^^xsd:string .
+
+ns1:Asset_tiiieh1fa a ns1:Asset ;
+    ns1:assetAvgColor "#AD977E"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "misc"^^xsd:string ;
+    ns1:assetID "tiiieh1fa"^^xsd:string ;
+    ns1:assetName "Ram Bone"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "animal"^^xsd:string,
+        "archviz"^^xsd:string,
+        "beige"^^xsd:string,
+        "bone"^^xsd:string,
+        "ram"^^xsd:string,
+        "small"^^xsd:string .
+
+ns1:Asset_tiiiej1fa a ns1:Asset ;
+    ns1:assetAvgColor "#AC9879"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "misc"^^xsd:string ;
+    ns1:assetID "tiiiej1fa"^^xsd:string ;
+    ns1:assetName "Ram Leg Bone"^^xsd:string ;
+    ns1:assetSize ns1:extra_large ;
+    ns1:assetTag "animal"^^xsd:string,
+        "archviz"^^xsd:string,
+        "bone"^^xsd:string,
+        "environments"^^xsd:string,
+        "leg"^^xsd:string,
+        "ram"^^xsd:string,
+        "urban"^^xsd:string .
+
+ns1:Asset_udlufh0qx a ns1:Asset ;
+    ns1:assetAvgColor "#4F4631"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "antique"^^xsd:string,
+        "stone"^^xsd:string ;
+    ns1:assetID "udlufh0qx"^^xsd:string ;
+    ns1:assetName "Japanese Stone Pillars"^^xsd:string ;
+    ns1:assetSize ns1:large .
+
+ns1:Asset_udugdfvfa a ns1:Asset ;
+    ns1:assetAvgColor "#757349"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "other"^^xsd:string ;
+    ns1:assetID "udugdfvfa"^^xsd:string ;
+    ns1:assetName "Cactus"^^xsd:string ;
+    ns1:assetSize ns1:medium .
+
+ns1:Asset_ueihbhefa a ns1:Asset ;
+    ns1:assetAvgColor "#6D543B"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "other"^^xsd:string ;
+    ns1:assetID "ueihbhefa"^^xsd:string ;
+    ns1:assetName "Jute Jug"^^xsd:string ;
+    ns1:assetSize ns1:small .
+
+ns1:Asset_uenkeewfa a ns1:Asset ;
+    ns1:assetAvgColor "#57462D"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "other"^^xsd:string ;
+    ns1:assetID "uenkeewfa"^^xsd:string ;
+    ns1:assetName "Cactus Pot"^^xsd:string ;
+    ns1:assetSize ns1:small .
+
+ns1:Asset_ufhoagrfa a ns1:Asset ;
+    ns1:assetAvgColor "#847059"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "other"^^xsd:string ;
+    ns1:assetID "ufhoagrfa"^^xsd:string ;
+    ns1:assetName "Old Stone Well"^^xsd:string ;
+    ns1:assetSize ns1:large .
+
+ns1:Asset_ukqncf3bw a ns1:Asset ;
+    ns1:assetAvgColor "#725538"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "props"^^xsd:string,
+        "storage"^^xsd:string ;
+    ns1:assetID "ukqncf3bw"^^xsd:string ;
+    ns1:assetName "Old Wooden Crate"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "box"^^xsd:string,
+        "brown"^^xsd:string,
+        "countryside"^^xsd:string,
+        "crate"^^xsd:string,
+        "dirty"^^xsd:string,
+        "dungeons"^^xsd:string,
+        "farms"^^xsd:string,
+        "home"^^xsd:string,
+        "houses"^^xsd:string,
+        "keepsakes"^^xsd:string,
+        "latch"^^xsd:string,
+        "lid"^^xsd:string,
+        "old"^^xsd:string,
+        "rough"^^xsd:string,
+        "rural"^^xsd:string,
+        "scratched"^^xsd:string,
+        "scratches"^^xsd:string,
+        "stained"^^xsd:string,
+        "stains"^^xsd:string,
+        "storage"^^xsd:string,
+        "storeroom"^^xsd:string,
+        "taverns"^^xsd:string,
+        "tools"^^xsd:string,
+        "treasures"^^xsd:string,
+        "warehouse"^^xsd:string,
+        "warsaw"^^xsd:string,
+        "wood"^^xsd:string,
+        "wooden"^^xsd:string,
+        "worn"^^xsd:string .
+
+ns1:Asset_umcrbbwga a ns1:Asset ;
+    ns1:assetAvgColor "#78523F"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "Nature"^^xsd:string,
+        "Rock"^^xsd:string ;
+    ns1:assetID "umcrbbwga"^^xsd:string ;
+    ns1:assetName "Canyon Sandstone Rocks Pile"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "arid"^^xsd:string,
+        "canyon"^^xsd:string,
+        "cliffs"^^xsd:string,
+        "desert"^^xsd:string,
+        "dry"^^xsd:string,
+        "dusty"^^xsd:string,
+        "hills"^^xsd:string,
+        "landscapes"^^xsd:string,
+        "moab"^^xsd:string,
+        "mountains"^^xsd:string,
+        "nature"^^xsd:string,
+        "old"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "pebbles"^^xsd:string,
+        "rock"^^xsd:string,
+        "rock face"^^xsd:string,
+        "rocky landscapes"^^xsd:string,
+        "stone"^^xsd:string,
+        "utah"^^xsd:string,
+        "weathered"^^xsd:string .
+
+ns1:Asset_vcytca0fa a ns1:Asset ;
+    ns1:assetAvgColor "#CCCECF"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "Embankment"^^xsd:string,
+        "Nature"^^xsd:string ;
+    ns1:assetID "vcytca0fa"^^xsd:string ;
+    ns1:assetName "Rocky Snow Pile"^^xsd:string ;
+    ns1:assetSize ns1:large ;
+    ns1:assetTag "arctic"^^xsd:string,
+        "cold"^^xsd:string,
         "embankment"^^xsd:string,
-        "forest"^^xsd:string,
-        "ground"^^xsd:string,
-        "lumps"^^xsd:string,
+        "frozen"^^xsd:string,
+        "gray"^^xsd:string,
+        "ice"^^xsd:string,
+        "mounds"^^xsd:string,
+        "mountain"^^xsd:string,
+        "nature"^^xsd:string,
+        "north pole"^^xsd:string,
+        "northern hemisphere"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "paths"^^xsd:string,
+        "roads"^^xsd:string,
+        "rocks"^^xsd:string,
+        "rough"^^xsd:string,
+        "smooth"^^xsd:string,
+        "snow"^^xsd:string,
+        "snowbank"^^xsd:string,
+        "snowy"^^xsd:string,
+        "white"^^xsd:string,
+        "winters"^^xsd:string .
+
+ns1:Asset_vdbmabvva a ns1:Asset ;
+    ns1:assetAvgColor "#D3D5D7"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "Nature"^^xsd:string,
+        "Snow"^^xsd:string ;
+    ns1:assetID "vdbmabvva"^^xsd:string ;
+    ns1:assetName "Snow Hill"^^xsd:string ;
+    ns1:assetSize ns1:large ;
+    ns1:assetTag "arctic"^^xsd:string,
+        "cold"^^xsd:string,
+        "frozen"^^xsd:string,
+        "gray"^^xsd:string,
+        "ice"^^xsd:string,
+        "mounds"^^xsd:string,
+        "mountain"^^xsd:string,
+        "nature"^^xsd:string,
+        "north pole"^^xsd:string,
+        "northern hemisphere"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "rocks"^^xsd:string,
+        "rough"^^xsd:string,
+        "snow"^^xsd:string,
+        "snowbank"^^xsd:string,
+        "snowy"^^xsd:string,
+        "white"^^xsd:string,
+        "winters"^^xsd:string .
+
+ns1:Asset_vdspdazqa a ns1:Asset ;
+    ns1:assetAvgColor "#C7C7C8"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "Nature"^^xsd:string,
+        "Snow"^^xsd:string ;
+    ns1:assetID "vdspdazqa"^^xsd:string ;
+    ns1:assetName "Huge Snow Hill"^^xsd:string ;
+    ns1:assetSize ns1:large ;
+    ns1:assetTag "arctic"^^xsd:string,
+        "cold"^^xsd:string,
+        "frozen"^^xsd:string,
+        "gray"^^xsd:string,
+        "ice"^^xsd:string,
+        "mounds"^^xsd:string,
+        "mountain"^^xsd:string,
+        "nature"^^xsd:string,
+        "north pole"^^xsd:string,
+        "northern hemisphere"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "rocks"^^xsd:string,
+        "rough"^^xsd:string,
+        "snow"^^xsd:string,
+        "snowbank"^^xsd:string,
+        "snowy"^^xsd:string,
+        "white"^^xsd:string,
+        "winters"^^xsd:string .
+
+ns1:Asset_vefkajufa a ns1:Asset ;
+    ns1:assetAvgColor "#E2E2E2"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "Nature"^^xsd:string,
+        "Snow"^^xsd:string ;
+    ns1:assetID "vefkajufa"^^xsd:string ;
+    ns1:assetName "Snowy Ground"^^xsd:string ;
+    ns1:assetSize ns1:large ;
+    ns1:assetTag "arctic"^^xsd:string,
+        "cold"^^xsd:string,
+        "frozen"^^xsd:string,
+        "gray"^^xsd:string,
+        "ice"^^xsd:string,
+        "mounds"^^xsd:string,
+        "mountain"^^xsd:string,
+        "nature"^^xsd:string,
+        "north pole"^^xsd:string,
+        "northern hemisphere"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "rocks"^^xsd:string,
+        "rough"^^xsd:string,
+        "snow"^^xsd:string,
+        "snowbank"^^xsd:string,
+        "snowy"^^xsd:string,
+        "white"^^xsd:string,
+        "winters"^^xsd:string .
+
+ns1:Asset_vemieei a ns1:Asset ;
+    ns1:assetAvgColor "#443D2C"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "Historical"^^xsd:string ;
+    ns1:assetID "vemieei"^^xsd:string ;
+    ns1:assetName "Japanese Stone Stairs Wall"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "ancient"^^xsd:string,
+        "chipped"^^xsd:string,
+        "green"^^xsd:string,
+        "lichen"^^xsd:string,
         "moss"^^xsd:string,
         "mossy"^^xsd:string,
-        "mound"^^xsd:string,
+        "old"^^xsd:string,
+        "stairs"^^xsd:string,
+        "steps"^^xsd:string,
+        "temple"^^xsd:string,
+        "worn"^^xsd:string .
+
+ns1:Asset_vlrnfeyaw a ns1:Asset ;
+    ns1:assetAvgColor "#4E4738"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "vlrnfeyaw"^^xsd:string ;
+    ns1:assetName "Beech Tree Trunk"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "brown"^^xsd:string,
+        "conifer"^^xsd:string,
+        "coniferous-forest"^^xsd:string,
+        "damaged"^^xsd:string,
+        "dead"^^xsd:string,
+        "dried"^^xsd:string,
+        "eroded"^^xsd:string,
+        "fallen"^^xsd:string,
+        "forests"^^xsd:string,
+        "green"^^xsd:string,
+        "ground"^^xsd:string,
+        "log"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "rotten"^^xsd:string,
+        "temperate"^^xsd:string,
+        "tree"^^xsd:string,
+        "trees"^^xsd:string,
+        "trunk"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_wbykcc0 a ns1:Asset ;
+    ns1:assetAvgColor "#3F311E"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string ;
+    ns1:assetID "wbykcc0"^^xsd:string ;
+    ns1:assetName "Deer Manure"^^xsd:string ;
+    ns1:assetSize ns1:small ;
+    ns1:assetTag "arid"^^xsd:string,
+        "black"^^xsd:string,
+        "brown"^^xsd:string,
+        "buck"^^xsd:string,
+        "deer"^^xsd:string,
+        "desert"^^xsd:string,
+        "dry"^^xsd:string,
+        "gray"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "poop"^^xsd:string,
+        "savannah"^^xsd:string,
+        "shit"^^xsd:string,
+        "turd"^^xsd:string,
+        "yellow"^^xsd:string .
+
+ns1:Asset_wbyqbcv a ns1:Asset ;
+    ns1:assetAvgColor "#322418"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string ;
+    ns1:assetID "wbyqbcv"^^xsd:string ;
+    ns1:assetName "Deer Manure"^^xsd:string ;
+    ns1:assetSize ns1:small ;
+    ns1:assetTag "arid"^^xsd:string,
+        "black"^^xsd:string,
+        "brown"^^xsd:string,
+        "buck"^^xsd:string,
+        "deer"^^xsd:string,
+        "desert"^^xsd:string,
+        "dry"^^xsd:string,
+        "gray"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "poop"^^xsd:string,
+        "savannah"^^xsd:string,
+        "shit"^^xsd:string,
+        "turd"^^xsd:string,
+        "yellow"^^xsd:string .
+
+ns1:Asset_wcjgbc1 a ns1:Asset ;
+    ns1:assetAvgColor "#5D5043"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wcjgbc1"^^xsd:string ;
+    ns1:assetName "Old Wooden Log"^^xsd:string ;
+    ns1:assetSize ns1:large ;
+    ns1:assetTag "bark"^^xsd:string,
+        "brown"^^xsd:string,
+        "construction"^^xsd:string,
+        "countryside"^^xsd:string,
+        "dull"^^xsd:string,
+        "houses"^^xsd:string,
+        "log"^^xsd:string,
+        "old"^^xsd:string,
+        "partner_content"^^xsd:string,
+        "rafter"^^xsd:string,
+        "rough"^^xsd:string,
+        "round"^^xsd:string,
+        "rural"^^xsd:string,
+        "short"^^xsd:string,
+        "villages"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wood"^^xsd:string,
+        "worn"^^xsd:string .
+
+ns1:Asset_wd0lfifbw a ns1:Asset ;
+    ns1:assetAvgColor "#493521"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wd0lfifbw"^^xsd:string ;
+    ns1:assetName "Old Tree Stump"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "broadleaf"^^xsd:string,
+        "brown"^^xsd:string,
+        "cracked"^^xsd:string,
+        "damaged"^^xsd:string,
+        "dead"^^xsd:string,
+        "dried"^^xsd:string,
+        "dry-wood"^^xsd:string,
+        "eroded"^^xsd:string,
+        "forests"^^xsd:string,
+        "grasslands"^^xsd:string,
+        "green"^^xsd:string,
+        "jungles"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "rotten"^^xsd:string,
+        "temperate"^^xsd:string,
+        "tree"^^xsd:string,
+        "tree stump"^^xsd:string,
+        "trees"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_wdjqbag a ns1:Asset ;
+    ns1:assetAvgColor "#5B4930"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wdjqbag"^^xsd:string ;
+    ns1:assetName "Ficus Microcarpa Tree Trunk"^^xsd:string ;
+    ns1:assetSize ns1:large ;
+    ns1:assetTag "brown"^^xsd:string,
+        "ficus"^^xsd:string,
+        "forsts"^^xsd:string,
+        "gray"^^xsd:string,
+        "green"^^xsd:string,
+        "grown"^^xsd:string,
+        "mossy"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "tall"^^xsd:string,
+        "tree"^^xsd:string,
+        "trees"^^xsd:string,
+        "trunk"^^xsd:string,
+        "yellow"^^xsd:string .
+
+ns1:Asset_wdzoebwbw a ns1:Asset ;
+    ns1:assetAvgColor "#5B442F"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wdzoebwbw"^^xsd:string ;
+    ns1:assetName "Old Tree Branch"^^xsd:string ;
+    ns1:assetSize ns1:small ;
+    ns1:assetTag "branch"^^xsd:string,
+        "broadleaf"^^xsd:string,
+        "brown"^^xsd:string,
+        "dead"^^xsd:string,
+        "dried"^^xsd:string,
+        "dry-wood"^^xsd:string,
+        "eroded"^^xsd:string,
+        "forests"^^xsd:string,
+        "furrowed"^^xsd:string,
+        "grasslands"^^xsd:string,
+        "gray"^^xsd:string,
+        "green"^^xsd:string,
+        "jungles"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "temperate"^^xsd:string,
+        "trees"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_webjdcvaa a ns1:Asset ;
+    ns1:assetAvgColor "#61361E"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "food"^^xsd:string,
+        "meat"^^xsd:string ;
+    ns1:assetID "webjdcvaa"^^xsd:string ;
+    ns1:assetName "Smoked Meat"^^xsd:string ;
+    ns1:assetSize ns1:small ;
+    ns1:assetTag "beef"^^xsd:string,
+        "big"^^xsd:string,
+        "brown"^^xsd:string,
+        "cooking"^^xsd:string,
+        "edible"^^xsd:string,
+        "homes"^^xsd:string,
+        "houses"^^xsd:string,
+        "kitchens"^^xsd:string,
+        "meat"^^xsd:string,
+        "medieval-banquet"^^xsd:string,
+        "partner-content"^^xsd:string,
+        "raw"^^xsd:string,
+        "red"^^xsd:string,
+        "smoked"^^xsd:string,
+        "steak"^^xsd:string .
+
+ns1:Asset_weflciqaa a ns1:Asset ;
+    ns1:assetAvgColor "#3C260D"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "food"^^xsd:string ;
+    ns1:assetID "weflciqaa"^^xsd:string ;
+    ns1:assetName "Smoked Fish"^^xsd:string ;
+    ns1:assetSize ns1:small ;
+    ns1:assetTag "black"^^xsd:string,
+        "brown"^^xsd:string,
+        "cooking"^^xsd:string,
+        "edible"^^xsd:string,
+        "fish"^^xsd:string,
+        "homes"^^xsd:string,
+        "houses"^^xsd:string,
+        "kitchens"^^xsd:string,
+        "meat"^^xsd:string,
+        "medievel-banquet"^^xsd:string,
+        "smoked"^^xsd:string .
+
+ns1:Asset_wgsrfg0s a ns1:Asset ;
+    ns1:assetAvgColor "#553F32"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wgsrfg0s"^^xsd:string ;
+    ns1:assetName "Rotten Tree Stump"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "brown"^^xsd:string,
+        "coniferous-forest"^^xsd:string,
+        "cracked"^^xsd:string,
+        "damaged"^^xsd:string,
+        "dead"^^xsd:string,
+        "dried"^^xsd:string,
+        "dry"^^xsd:string,
+        "eroded"^^xsd:string,
+        "forests"^^xsd:string,
+        "grasslands"^^xsd:string,
+        "gray"^^xsd:string,
+        "green"^^xsd:string,
+        "jungles"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "rotten"^^xsd:string,
+        "temperate"^^xsd:string,
+        "tree"^^xsd:string,
+        "tree stump"^^xsd:string,
+        "trees"^^xsd:string,
+        "utica-reservoir"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_wguuebt a ns1:Asset ;
+    ns1:assetAvgColor "#544534"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wguuebt"^^xsd:string ;
+    ns1:assetName "Grassy Embankment"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "brown"^^xsd:string,
+        "coarse"^^xsd:string,
+        "coniferous-forest"^^xsd:string,
+        "debris"^^xsd:string,
+        "dirt"^^xsd:string,
+        "floor"^^xsd:string,
+        "forests"^^xsd:string,
+        "grass"^^xsd:string,
+        "grassy"^^xsd:string,
+        "gray"^^xsd:string,
+        "ground"^^xsd:string,
+        "jungle"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "scattered"^^xsd:string,
+        "soil"^^xsd:string,
+        "utica-reservoir"^^xsd:string,
+        "white"^^xsd:string,
+        "wild"^^xsd:string,
+        "wilderness"^^xsd:string,
+        "woods"^^xsd:string .
+
+ns1:Asset_wguvfak a ns1:Asset ;
+    ns1:assetAvgColor "#625347"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string ;
+    ns1:assetID "wguvfak"^^xsd:string ;
+    ns1:assetName "Forest Ground"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "bark"^^xsd:string,
+        "brown"^^xsd:string,
+        "coarse"^^xsd:string,
+        "coniferous-forest"^^xsd:string,
+        "debris"^^xsd:string,
+        "dirt"^^xsd:string,
+        "dry"^^xsd:string,
+        "floor"^^xsd:string,
+        "forests"^^xsd:string,
+        "gravel"^^xsd:string,
+        "gray"^^xsd:string,
+        "ground"^^xsd:string,
+        "jungle"^^xsd:string,
+        "leaves"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "scattered"^^xsd:string,
+        "soil"^^xsd:string,
+        "stones"^^xsd:string,
+        "twigs"^^xsd:string,
+        "utica-reservoir"^^xsd:string,
+        "white"^^xsd:string,
+        "wild"^^xsd:string,
+        "wilderness"^^xsd:string,
+        "woods"^^xsd:string .
+
+ns1:Asset_wgxlbc3aw a ns1:Asset ;
+    ns1:assetAvgColor "#483D2A"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wgxlbc3aw"^^xsd:string ;
+    ns1:assetName "Mossy Forest Ground"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "brown"^^xsd:string,
+        "dirt"^^xsd:string,
+        "forest"^^xsd:string,
+        "ground"^^xsd:string,
+        "moss"^^xsd:string,
+        "mossy"^^xsd:string,
         "nordic"^^xsd:string,
+        "roots"^^xsd:string,
         "rough"^^xsd:string,
         "sweden"^^xsd:string,
         "terrain"^^xsd:string,
         "tyresta"^^xsd:string .
 
-:Asset_Mossy_Rock_Face a :Asset ;
-    :assetAvgColor "#3C3615"^^xsd:string ;
-    :assetCategory "3d"^^xsd:string,
-        "ground"^^xsd:string,
-        "moss"^^xsd:string ;
-    :assetEnvironmentBiome :Biome_undefined ;
-    :assetEnvironmentRegion :Region_Europe ;
-    :assetID "tlesfb1fa"^^xsd:string ;
-    :assetName "Mossy Rock Face"^^xsd:string ;
-    :assetSize :medium ;
-    :assetTag "archviz"^^xsd:string,
-        "cliff"^^xsd:string,
-        "embankment"^^xsd:string,
-        "ground"^^xsd:string,
-        "moss"^^xsd:string,
-        "mossy"^^xsd:string,
-        "needles"^^xsd:string,
-        "rock"^^xsd:string,
-        "roots"^^xsd:string,
-        "tyresta"^^xsd:string .
-
-:Asset_Wooden_Chair a :Asset ;
-    :assetAvgColor "#4F3722"^^xsd:string ;
-    :assetCategory "3d"^^xsd:string,
-        "furniture"^^xsd:string,
-        "interior"^^xsd:string,
-        "seating"^^xsd:string ;
-    :assetEnvironmentBiome :Biome_rural ;
-    :assetEnvironmentRegion :Region_Europe ;
-    :assetID "uknkaffaw"^^xsd:string ;
-    :assetName "Wooden Chair"^^xsd:string ;
-    :assetSize :medium ;
-    :assetTag "armless"^^xsd:string,
+ns1:Asset_whbedjl a ns1:Asset ;
+    ns1:assetAvgColor "#5A4730"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "whbedjl"^^xsd:string ;
+    ns1:assetName "Rotten Tree Stump"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "broadleaf"^^xsd:string,
         "brown"^^xsd:string,
-        "canteens"^^xsd:string,
-        "countryside"^^xsd:string,
-        "dining-rooms"^^xsd:string,
-        "furniture"^^xsd:string,
+        "cracked"^^xsd:string,
+        "damaged"^^xsd:string,
+        "dead"^^xsd:string,
+        "dried"^^xsd:string,
+        "eroded"^^xsd:string,
+        "forests"^^xsd:string,
+        "grasslands"^^xsd:string,
+        "green"^^xsd:string,
+        "jungles"^^xsd:string,
+        "mossy"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "rotten"^^xsd:string,
+        "temperate"^^xsd:string,
+        "tree"^^xsd:string,
+        "tree stump"^^xsd:string,
+        "trees"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_whlofiidw a ns1:Asset ;
+    ns1:assetAvgColor "#786758"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "building"^^xsd:string,
+        "railing"^^xsd:string ;
+    ns1:assetID "whlofiidw"^^xsd:string ;
+    ns1:assetName "Modular Handrail Kit"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "brown"^^xsd:string,
+        "cmb_asset"^^xsd:string,
+        "cmb_scatter"^^xsd:string,
+        "derelict"^^xsd:string,
+        "end-post"^^xsd:string,
+        "faded"^^xsd:string,
+        "handrail"^^xsd:string,
+        "indoor"^^xsd:string,
+        "interior"^^xsd:string,
+        "old"^^xsd:string,
+        "pole"^^xsd:string,
+        "post"^^xsd:string,
+        "rail"^^xsd:string,
+        "scatter"^^xsd:string,
+        "stained"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wooden"^^xsd:string,
+        "worn"^^xsd:string .
+
+ns1:Asset_wj3jfcsqx a ns1:Asset ;
+    ns1:assetAvgColor "#807463"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "historical"^^xsd:string ;
+    ns1:assetID "wj3jfcsqx"^^xsd:string ;
+    ns1:assetName "Old Gravestone"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "gravestone"^^xsd:string,
+        "gray"^^xsd:string .
+
+ns1:Asset_wj3keacqx a ns1:Asset ;
+    ns1:assetAvgColor "#AF9E8A"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "historical"^^xsd:string,
+        "roman empire"^^xsd:string ;
+    ns1:assetID "wj3keacqx"^^xsd:string ;
+    ns1:assetName "Damaged Roman Plinth"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "capital"^^xsd:string,
+        "caput"^^xsd:string,
+        "carved"^^xsd:string,
+        "carving"^^xsd:string,
+        "column"^^xsd:string,
+        "hispania"^^xsd:string,
+        "marble"^^xsd:string,
+        "merida"^^xsd:string,
+        "old"^^xsd:string,
+        "pillar"^^xsd:string,
+        "roman"^^xsd:string,
+        "rome"^^xsd:string,
+        "rough"^^xsd:string,
+        "teatro romano"^^xsd:string,
+        "white"^^xsd:string,
+        "worn"^^xsd:string .
+
+ns1:Asset_wjkjbb1aw a ns1:Asset ;
+    ns1:assetAvgColor "#524631"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "farm"^^xsd:string,
+        "props"^^xsd:string ;
+    ns1:assetID "wjkjbb1aw"^^xsd:string ;
+    ns1:assetName "Wooden Beehive"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "bee"^^xsd:string,
+        "farm"^^xsd:string,
+        "nature"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_wjmgdi0dw a ns1:Asset ;
+    ns1:assetAvgColor "#E8D6C1"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "historical"^^xsd:string ;
+    ns1:assetID "wjmgdi0dw"^^xsd:string ;
+    ns1:assetName "Modular Frieze"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "architecture"^^xsd:string,
+        "art"^^xsd:string,
+        "bedi mahal"^^xsd:string,
+        "cmb_asset"^^xsd:string,
+        "cmb_scatter"^^xsd:string,
+        "derelict"^^xsd:string,
+        "medieval"^^xsd:string,
+        "old"^^xsd:string,
+        "painted"^^xsd:string,
+        "scatter"^^xsd:string,
+        "trim"^^xsd:string,
+        "white"^^xsd:string .
+
+ns1:Asset_wjnhfhfdw a ns1:Asset ;
+    ns1:assetAvgColor "#CCC0B3"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "historical"^^xsd:string ;
+    ns1:assetID "wjnhfhfdw"^^xsd:string ;
+    ns1:assetName "Modular Pillar"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "architecture"^^xsd:string,
+        "art"^^xsd:string,
+        "bedi mahal"^^xsd:string,
+        "cmb_asset"^^xsd:string,
+        "cmb_scatter"^^xsd:string,
+        "derelict"^^xsd:string,
+        "medieval"^^xsd:string,
+        "old"^^xsd:string,
+        "painted"^^xsd:string,
+        "pillar"^^xsd:string,
+        "scatter"^^xsd:string,
+        "white"^^xsd:string .
+
+ns1:Asset_wjuvde0qx a ns1:Asset ;
+    ns1:assetAvgColor "#6E6451"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "historical"^^xsd:string ;
+    ns1:assetID "wjuvde0qx"^^xsd:string ;
+    ns1:assetName "Old Gravestone"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "gravestone"^^xsd:string,
+        "gray"^^xsd:string .
+
+ns1:Asset_wjuvdewqx a ns1:Asset ;
+    ns1:assetAvgColor "#514D36"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "historical"^^xsd:string,
+        "wild west"^^xsd:string ;
+    ns1:assetID "wjuvdewqx"^^xsd:string ;
+    ns1:assetName "Mossy Gravestone"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "cementeries"^^xsd:string,
+        "church"^^xsd:string,
+        "churchyard"^^xsd:string,
+        "cross"^^xsd:string,
+        "dirty"^^xsd:string,
+        "gravesite"^^xsd:string,
+        "gravestone"^^xsd:string,
+        "graveyard"^^xsd:string,
+        "gray"^^xsd:string,
+        "lichened"^^xsd:string,
+        "mossy"^^xsd:string,
+        "old"^^xsd:string,
+        "partner-content"^^xsd:string,
+        "tombstone"^^xsd:string,
+        "weathered"^^xsd:string,
+        "writing"^^xsd:string .
+
+ns1:Asset_wjwuacb a ns1:Asset ;
+    ns1:assetAvgColor "#5D5049"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "rock"^^xsd:string ;
+    ns1:assetID "wjwuacb"^^xsd:string ;
+    ns1:assetName "Forest Rocky Embankment"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "boulder"^^xsd:string,
+        "brown"^^xsd:string,
+        "cliffs"^^xsd:string,
+        "conifer"^^xsd:string,
+        "coniferous-forest"^^xsd:string,
+        "cracked"^^xsd:string,
+        "dirty"^^xsd:string,
+        "gray"^^xsd:string,
+        "ground"^^xsd:string,
+        "grounds"^^xsd:string,
+        "mountains"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "rock"^^xsd:string,
+        "rough"^^xsd:string,
+        "round"^^xsd:string,
+        "stone"^^xsd:string,
+        "temperate"^^xsd:string,
+        "utica reservoir"^^xsd:string,
+        "weathered"^^xsd:string .
+
+ns1:Asset_wjztdj0s a ns1:Asset ;
+    ns1:assetAvgColor "#4A3B2F"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wjztdj0s"^^xsd:string ;
+    ns1:assetName "Rotten Tree Stump"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "brown"^^xsd:string,
+        "conifer"^^xsd:string,
+        "coniferous-forest"^^xsd:string,
+        "cracked"^^xsd:string,
+        "damaged"^^xsd:string,
+        "dead"^^xsd:string,
+        "dried"^^xsd:string,
+        "dry"^^xsd:string,
+        "eroded"^^xsd:string,
+        "forests"^^xsd:string,
+        "grasslands"^^xsd:string,
+        "gray"^^xsd:string,
+        "jungles"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoor"^^xsd:string,
+        "pine"^^xsd:string,
+        "rotten"^^xsd:string,
+        "temperate"^^xsd:string,
+        "tree"^^xsd:string,
+        "tree stump"^^xsd:string,
+        "trees"^^xsd:string,
+        "utica-reservoir"^^xsd:string,
+        "weathered"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_wjzwbdas a ns1:Asset ;
+    ns1:assetAvgColor "#533E32"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "tree"^^xsd:string ;
+    ns1:assetID "wjzwbdas"^^xsd:string ;
+    ns1:assetName "Broken Tree Trunk"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "branch"^^xsd:string,
+        "broken"^^xsd:string,
+        "brown"^^xsd:string,
+        "conifer"^^xsd:string,
+        "coniferous-forest"^^xsd:string,
+        "cut"^^xsd:string,
+        "forests"^^xsd:string,
+        "grasslands"^^xsd:string,
+        "gray"^^xsd:string,
+        "jungles"^^xsd:string,
+        "nature"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "small"^^xsd:string,
+        "temperate"^^xsd:string,
+        "thin"^^xsd:string,
+        "trees"^^xsd:string,
+        "utica-reservoir"^^xsd:string,
+        "wood"^^xsd:string .
+
+ns1:Asset_wk1ncbxja a ns1:Asset ;
+    ns1:assetAvgColor "#000000"^^xsd:string ;
+    ns1:assetCategory "3dplant"^^xsd:string,
+        "garden plant"^^xsd:string ;
+    ns1:assetID "wk1ncbxja"^^xsd:string ;
+    ns1:assetName "European Spindle"^^xsd:string ;
+    ns1:assetTag "brown"^^xsd:string,
+        "common euonymus"^^xsd:string,
+        "euonymus europaeus"^^xsd:string,
+        "euonymus plant"^^xsd:string,
+        "flower plant"^^xsd:string,
+        "green"^^xsd:string,
+        "pink"^^xsd:string,
+        "red"^^xsd:string,
+        "small tree"^^xsd:string,
+        "yellow"^^xsd:string .
+
+ns1:Asset_wl2maivdw a ns1:Asset ;
+    ns1:assetAvgColor "#573728"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "building"^^xsd:string,
+        "pillar"^^xsd:string ;
+    ns1:assetID "wl2maivdw"^^xsd:string ;
+    ns1:assetName "Modular Wooden Pillar"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "archviz"^^xsd:string,
+        "buildings"^^xsd:string,
+        "clean"^^xsd:string,
+        "cmb_asset"^^xsd:string,
+        "cmb_scatter"^^xsd:string,
+        "column"^^xsd:string,
+        "decorative"^^xsd:string,
         "homes"^^xsd:string,
         "houses"^^xsd:string,
-        "ladder-back"^^xsd:string,
-        "restaurants"^^xsd:string,
-        "rural"^^xsd:string,
-        "rustic"^^xsd:string,
-        "seat"^^xsd:string,
-        "smooth"^^xsd:string,
-        "villages"^^xsd:string,
+        "interiors"^^xsd:string,
+        "library"^^xsd:string,
+        "mansions"^^xsd:string,
+        "old"^^xsd:string,
+        "ornate"^^xsd:string,
+        "palaces"^^xsd:string,
+        "scatter"^^xsd:string,
+        "white"^^xsd:string,
+        "wood"^^xsd:string,
+        "wooden"^^xsd:string .
+
+ns1:Asset_wl3ieamdw a ns1:Asset ;
+    ns1:assetAvgColor "#5C4B3E"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "interior"^^xsd:string,
+        "stair"^^xsd:string ;
+    ns1:assetID "wl3ieamdw"^^xsd:string ;
+    ns1:assetName "Modular Stairs Kit"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "architecture"^^xsd:string,
+        "archviz"^^xsd:string,
+        "baroque"^^xsd:string,
+        "bozkow"^^xsd:string,
+        "brown"^^xsd:string,
+        "cmb_asset"^^xsd:string,
+        "cmb_scatter"^^xsd:string,
+        "houses"^^xsd:string,
+        "interiors"^^xsd:string,
+        "library"^^xsd:string,
+        "mansions"^^xsd:string,
+        "offices"^^xsd:string,
+        "old"^^xsd:string,
+        "palaces"^^xsd:string,
+        "scatter"^^xsd:string,
+        "stained"^^xsd:string,
+        "staircase"^^xsd:string,
+        "stairs"^^xsd:string,
         "wood"^^xsd:string,
         "wooden"^^xsd:string,
         "worn"^^xsd:string .
 
-:assetAge a owl:DatatypeProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range xsd:string ;
-    rdfs:subPropertyOf owl:topDataProperty .
+ns1:Asset_wmcpfbydw a ns1:Asset ;
+    ns1:assetAvgColor "#7A6754"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "building"^^xsd:string ;
+    ns1:assetID "wmcpfbydw"^^xsd:string ;
+    ns1:assetName "Modular Building Door"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "bedi mahl"^^xsd:string,
+        "brown"^^xsd:string,
+        "grid"^^xsd:string,
+        "old"^^xsd:string,
+        "snap"^^xsd:string,
+        "tiling"^^xsd:string,
+        "wall"^^xsd:string,
+        "window"^^xsd:string,
+        "worn"^^xsd:string .
 
-:assetAvgColor a owl:DatatypeProperty ;
-    rdfs:comment "will be a valid hex code" ;
-    rdfs:domain :Asset ;
-    rdfs:range xsd:string .
+ns1:Asset_wmcqaaodw a ns1:Asset ;
+    ns1:assetAvgColor "#705F4A"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "building"^^xsd:string ;
+    ns1:assetID "wmcqaaodw"^^xsd:string ;
+    ns1:assetName "Modular Building Door"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "bedi mahl"^^xsd:string,
+        "brown"^^xsd:string,
+        "grid"^^xsd:string,
+        "old"^^xsd:string,
+        "snap"^^xsd:string,
+        "tiling"^^xsd:string,
+        "wall"^^xsd:string,
+        "window"^^xsd:string,
+        "worn"^^xsd:string .
 
-:assetEnvironmentBiome a owl:ObjectProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range :Biome .
+ns1:Asset_xbtkfikdw a ns1:Asset ;
+    ns1:assetAvgColor "#352923"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "interior"^^xsd:string,
+        "railing"^^xsd:string ;
+    ns1:assetID "xbtkfikdw"^^xsd:string ;
+    ns1:assetName "Modular Wooden Rail"^^xsd:string ;
+    ns1:assetSize ns1:medium ;
+    ns1:assetTag "cmb_asset"^^xsd:string,
+        "cmb_scatter"^^xsd:string,
+        "scatter"^^xsd:string .
 
-:assetEnvironmentRegion a owl:ObjectProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range :Region .
+ns1:Asset_xekkackqx a ns1:Asset ;
+    ns1:assetAvgColor "#C0BEBB"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "snow"^^xsd:string ;
+    ns1:assetID "xekkackqx"^^xsd:string ;
+    ns1:assetName "Snow Clump"^^xsd:string ;
+    ns1:assetSize ns1:small ;
+    ns1:assetTag "arctic"^^xsd:string,
+        "black"^^xsd:string,
+        "cold"^^xsd:string,
+        "frozen"^^xsd:string,
+        "gray"^^xsd:string,
+        "ice"^^xsd:string,
+        "mountain"^^xsd:string,
+        "nature"^^xsd:string,
+        "north pole"^^xsd:string,
+        "northern hemisphere"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "rocks"^^xsd:string,
+        "rough"^^xsd:string,
+        "snow"^^xsd:string,
+        "snowball"^^xsd:string,
+        "snowy"^^xsd:string,
+        "white"^^xsd:string,
+        "winters"^^xsd:string .
 
-:assetSize a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range :AssetSize .
+ns1:Asset_xekkefiqx a ns1:Asset ;
+    ns1:assetAvgColor "#695138"^^xsd:string ;
+    ns1:assetCategory "3d"^^xsd:string,
+        "nature"^^xsd:string,
+        "rock"^^xsd:string ;
+    ns1:assetID "xekkefiqx"^^xsd:string ;
+    ns1:assetName "Beach Cliff"^^xsd:string ;
+    ns1:assetSize ns1:large ;
+    ns1:assetTag "beach"^^xsd:string,
+        "broadleaf"^^xsd:string,
+        "brown"^^xsd:string,
+        "cliff"^^xsd:string,
+        "coastline"^^xsd:string,
+        "eroded"^^xsd:string,
+        "gray"^^xsd:string,
+        "green"^^xsd:string,
+        "ida no hama"^^xsd:string,
+        "japan"^^xsd:string,
+        "nature"^^xsd:string,
+        "old"^^xsd:string,
+        "orange"^^xsd:string,
+        "outdoors"^^xsd:string,
+        "rock"^^xsd:string,
+        "rough"^^xsd:string,
+        "shoreline"^^xsd:string,
+        "stone"^^xsd:string,
+        "tropical"^^xsd:string .
 
-:AssetSize a owl:Class ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:oneOf ( :extra_large :large :medium :small :tiny ) ] .
-
-:Biome_rural a :Biome ;
-    :biomeName "rural"^^xsd:string .
-
-:Region_Asia a :Region ;
-    :regionName "Asia"^^xsd:string .
-
-:assetCategory a owl:DatatypeProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range xsd:string .
-
-:assetID a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range xsd:string .
-
-:assetName a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range xsd:string .
-
-:assetTag a owl:DatatypeProperty ;
-    rdfs:domain :Asset ;
-    rdfs:range xsd:string .
-
-:biomeName a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:domain :Biome ;
-    rdfs:range xsd:string .
-
-:extra_large a owl:NamedIndividual .
-
-:regionName a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:domain :Region ;
-    rdfs:range xsd:string .
-
-:small a owl:NamedIndividual .
-
-:tiny a owl:NamedIndividual .
-
-:large a owl:NamedIndividual .
-
-:Biome_undefined a :Biome ;
-    :biomeName "undefined"^^xsd:string .
-
-:Region_Europe a :Region ;
-    :regionName "Europe"^^xsd:string .
-
-:Biome a owl:Class ;
-    rdfs:comment "found in data[\"environment\"][\"region\"] in asset.json file" ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty :biomeName ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-:Region a owl:Class ;
-    rdfs:comment "data[\"environment\"][\"biome\"]" ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty :regionName ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-:medium a owl:NamedIndividual .
-
-:Asset a owl:Class ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty :assetCategory ] [ a owl:Restriction ;
-                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty :assetTag ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty :assetID ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty :assetName ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] .
+ns1:Asset_xeogciyqx a ns1:Asset ;
+    ns1:assetAvgColor "#000000"^^xsd:string ;
+    ns1:assetCategory "3dplant"^^xsd:string,
+        "grass"^^xsd:string ;
+    ns1:assetID "xeogciyqx"^^xsd:string ;
+    ns1:assetName "Desert Cotton"^^xsd:string ;
+    ns1:assetTag "aerva javanica"^^xsd:string,
+        "brown"^^xsd:string,
+        "desert cotton"^^xsd:string,
+        "gray"^^xsd:string,
+        "green"^^xsd:string,
+        "orange"^^xsd:string,
+        "puffy grass"^^xsd:string,
+        "white"^^xsd:string,
+        "yellow"^^xsd:string .

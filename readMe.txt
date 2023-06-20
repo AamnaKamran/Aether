@@ -6,7 +6,6 @@ Final Year Project
   Roll Number: 19I-0454, 19I-0437 and 19I-0555
   Project Type: Development
   Group Number: F22-062
-  Submission Date: Sunday, 9th January, 2023
 
 Installation Requirements:
 Before starting the application, make sure that the following installations have been made:

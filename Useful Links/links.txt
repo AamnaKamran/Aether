@@ -1,5 +1,0 @@
-Sample JSON file which contains asset description:
-https://gist.github.com/kamilwaheed/b324ed9637c7a6599650
-
-Article: A Verb-Based Algorithm for Multiple-Relation Extraction from Single Sentences:
-https://nms.kcl.ac.uk/jeroen.keppens/documents/ike2017.pdf

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aether-app
+spec:
+  selector:
+    matchLabels:
+      app: aether-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aether-app
+    spec:
+      containers:
+        - name: aether-app-test
+          image: build-my-dockerfile:${{env.TIMESTAMP}}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000

@@ -1,5 +1,0 @@
-Dependencies: Python 3, pip
-
-1. pip install PyAudio    or    sudo apt install python3-pyaudio
-2. pip install vosk
-
